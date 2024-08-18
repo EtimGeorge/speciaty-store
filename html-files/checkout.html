@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout - Saen Crystal Specialty Stores</title>
+<link rel="stylesheet" href="../css-files/client-styles.css">
+
+<link rel="stylesheet" href="../css-files/checkout.css">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo">
+                <img src="../assets-files/client/only-logo.png" alt=""><p>saencrystal <highlight-text>specialty</highlight-text> Stores</p> 
+            </div>
+
+            <div class="mobile-nav">
+                
+                <div id="menu-toggle" class="menu-toggle">☰</div>
+                <div id="menu-cancel" class="menu-cancel">✕</div>
+
+            </div>
+            <div class="navbar">
+                 <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="../html-files/shop-saencrystal specialty store.html">Shop</a></li>
+                    <li><a href="../html-files/about us saencrystal specialty store.html">About</a></li>
+                    <li><a href="../html-files/contact us saencrystal specialty store.html">Contact</a></li>
+                    <li><a href="../html-files/blog-seancrystal specialty store.html">Blog</a></li>
+                </ul>
+                <div class="user-actions">
+                    <a href="../html-files/shoping-cart saencrystal specialty store.html" class="cart-icon">Cart</a>
+                    <div class="login"><a href="../html-files/login&signup saencrystal specialty store.html">Login</a></div>
+                    
+                </div>
+                
+            </div>
+
+            
+        </nav>
+    </header>
+
+    <div class="container" role="main">
+        <h1>Checkout</h1>
+
+        <div class="checkout-container">
+            <form id="checkout-form" class="checkout-form">
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" required>
+                        <option value="">Select a country</option>
+                        <option value="US">United States</option>
+                        <option value="CA">Canada</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="AU">Australia</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <div class="payment-methods">
+                        <div class="payment-method" data-method="credit-card">
+                            <img src="https://via.placeholder.com/100x30?text=Credit+Card" alt="Credit Card" width="100" height="30">
+                            Credit Card
+                        </div>
+                        <div class="payment-method" data-method="paypal">
+                            <img src="https://via.placeholder.com/100x30?text=PayPal" alt="PayPal" width="100" height="30">
+                            PayPal
+                        </div>
+                        <div class="payment-method" data-method="stripe">
+                            <img src="https://via.placeholder.com/100x30?text=Stripe" alt="Stripe" width="100" height="30">
+                            Stripe
+                        </div>
+                        <div class="payment-method" data-method="apple-pay">
+                            <img src="https://via.placeholder.com/100x30?text=Apple+Pay" alt="Apple Pay" width="100" height="30">
+                            Apple Pay
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="place-order-btn">Place Order</button>
+            </form>
+
+            <div class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="order-total">Total: $0.00</div>
+            </div>
+        </div>
+    </div>
+    <script src="../js-files/client.js"></script>
+    <script src="../js-files/cart-manager.js"></script>
+    <script src="../js-files/checkout.js"></script>
+
+</body>
+</html>

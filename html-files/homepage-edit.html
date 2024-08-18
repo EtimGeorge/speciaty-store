@@ -1,0 +1,1052 @@
+<html><head><base href="https://www.saencrystal-specialty-stores.com/now%20write%20the%20page%20together%20so%20that%20i%20can%20see%20it%20functioning/the%20navbar%20should%20contain%20the%20other%20pages%20to%20be%20created%20and%20not%20the%20product%20categories,%20make%20the%20page%20more%20interactive%20and%20add%20serious%20animations%20and%20responsiveness,%20also%20media%20queries%20for%20all%20screen%20sizes/%20follow%20the%20folder%20structure%20and%20add%20the%20categories%20as%20aside,%20do%20not%20miss%20out%20on%20anything%20that%20is%20included%20in%20the%20folder%20structure,%20make%20the%20page%20attractive%20and%20colorful%20./">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saen Crystal Specialty Stores</title>
+<style>
+:root {
+    --primary-color: #6a4c93;
+    --secondary-color: #1982c4;
+    --accent-color: #f9844a;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.user-actions a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Main Content */
+main {
+    margin-top: 90px;
+    display: flex;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background-color: var(--secondary-color);
+    padding: 20px;
+    color: var(--white);
+    transition: all 0.3s ease;
+}
+
+.sidebar h2 {
+    margin-bottom: 20px;
+}
+
+.category-list {
+    list-style: none;
+}
+
+.category-list > li {
+    margin-bottom: 15px;
+}
+
+.category-list > li > a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.category-list > li > a:hover {
+    color: var(--accent-color);
+}
+
+.subcategory-list {
+    list-style: none;
+    margin-left: 15px;
+    margin-top: 5px;
+}
+
+.subcategory-list li {
+    margin-bottom: 5px;
+}
+
+.subcategory-list a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.9em;
+    transition: color 0.3s ease;
+}
+
+.subcategory-list a:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--white);
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    animation: fadeInUp 1s ease;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease 0.2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: fadeInUp 1s ease 0.4s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+.cta-button:hover {
+    background-color: #e07a3c;
+    transform: translateY(-3px);
+}
+
+/* Featured Products Carousel */
+.featured-products {
+    padding: 80px 0;
+}
+
+.featured-products h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+.product-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.product-info p {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.carousel-button-prev {
+    left: 10px;
+}
+
+.carousel-button-next {
+    right: 10px;
+}
+
+/* Popular Categories */
+.popular-categories {
+    padding: 80px 0;
+    background-color: #f0f0f0;
+}
+
+.popular-categories h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.category-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 15px;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Seasonal Promotions */
+.seasonal-promotions {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+}
+
+.seasonal-promotions h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+.promotion-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.promotion-card img {
+    width: 40%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.promotion-info {
+    padding: 20px;
+    width: 60%;
+}
+
+.promotion-info h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.promotion-info p {
+    margin-bottom: 15px;
+}
+
+/* New Arrivals */
+.new-arrivals {
+    padding: 80px 0;
+}
+
+.new-arrivals h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.arrivals-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Customer Reviews */
+.customer-reviews {
+    padding: 80px 0;
+    background-color: #f0f0f0;
+}
+
+.customer-reviews h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+}
+
+.review-card {
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.review-card .stars {
+    color: #ffd700;
+    margin-bottom: 10px;
+}
+
+.review-card .reviewer {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Newsletter Section */
+.newsletter-signup {
+    background-color: var(--secondary-color);
+    padding: 80px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.newsletter-form input[type="email"] {
+    padding: 12px;
+    width: 300px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.newsletter-form button {
+    padding: 12px 20px;
+    background-color: var(--accent-color);
+    color: var(--white);
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form button:hover {
+    background-color: #e07a3c;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--accent-color);
+}
+
+.social-icons a {
+    margin-right: 15px;
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding-top: 60px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin-bottom: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 2;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        order: 2;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .newsletter-form input[type="email"] {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .newsletter-form button {
+        width: 100%;
+        border-radius: 5px;
+    }
+
+    .promotion-card {
+        flex-direction: column;
+    }
+
+    .promotion-card img {
+        width: 100%;
+        height: 200px;
+    }
+
+    .promotion-info {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .product-grid, .categories-grid, .arrivals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+}
+</style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="/"><img src="https://via.placeholder.com/150x50?text=Saen+Crystal+Logo" alt="Saen Crystal Specialty Stores Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="user-actions">
+                <a href="#">Login</a>
+                <a href="#" class="cart-icon">Cart</a>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <aside class="sidebar">
+            <h2>Categories</h2>
+            <ul class="category-list">
+                <li>
+                    <a href="#">Baking Supplies</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Ingredients</a></li>
+                        <li><a href="#">Bakeware</a></li>
+                        <li><a href="#">Decorating tools</a></li>
+                        <li><a href="#">Packaging supplies</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Groceries</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Fresh produce</a></li>
+                        <li><a href="#">Dairy & Eggs</a></li>
+                        <li><a href="#">Meat & Seafood</a></li>
+                        <li><a href="#">Pantry staples</a></li>
+                        <li><a href="#">Snacks & Beverages</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Health and Beauty</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Skincare</a></li>
+                        <li><a href="#">Haircare</a></li>
+                        <li><a href="#">Makeup</a></li>
+                        <li><a href="#">Personal hygiene</a></li>
+                        <li><a href="#">Vitamins & Supplements</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Small Appliances</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Kitchen appliances</a></li>
+                        <li><a href="#">Home appliances</a></li>
+                        <li><a href="#">Personal care appliances</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Home Care</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Cleaning supplies</a></li>
+                        <li><a href="#">Laundry products</a></li>
+                        <li><a href="#">Air fresheners</a></li>
+                        <li><a href="#">Pest control</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Liquor</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Wine</a></li>
+                        <li><a href="#">Beer</a></li>
+                        <li><a href="#">Spirits</a></li>
+                        <li><a href="#">Mixers & Accessories</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Lighting</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Indoor lighting</a></li>
+                        <li><a href="#">Outdoor lighting</a></li>
+                        <li><a href="#">Light bulbs & accessories</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Kitchen Utensils</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Cooking utensils</a></li>
+                        <li><a href="#">Cutlery</a></li>
+                        <li><a href="#">Measuring tools</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Kitchenware</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Cookware</a></li>
+                        <li><a href="#">Dinnerware</a></li>
+                        <li><a href="#">Food storage</a></li>
+                        <li><a href="#">Serveware</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Bedding</a>
+                    <ul class="subcategory-list">
+                        <li><a href="#">Bed sheets & pillowcases</a></li>
+                        <li><a href="#">Comforters & duvets</a></li>
+                        <li><a href="#">Blankets & throws</a></li>
+                        <li><a href="#">Pillows</a></li>
+                        <li><a href="#">Mattress toppers & protectors</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
+
+        <div class="main-content">
+            <section class="hero">
+                <div class="container">
+                    <h1>Welcome to Saen Crystal Specialty Stores</h1>
+                    <p>Your one-stop shop for all your home and lifestyle needs</p>
+                    <a href="#" class="cta-button">Shop Now</a>
+                </div>
+            </section>
+
+            <section class="featured-products container">
+                <h2>Featured Products</h2>
+                <div class="carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide">
+                            <div class="product-card">
+                                <img src="https://via.placeholder.com/300x200?text=Crystal+Vase" alt="Crystal Vase" width="300" height="200">
+                                <div class="product-info">
+                                    <h3>Crystal Vase</h3>
+                                    <p>$59.99</p>
+                                    <button class="btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="product-card">
+                                <img src="https://via.placeholder.com/300x200?text=Gourmet+Coffee" alt="Gourmet Coffee" width="300" height="200">
+                                <div class="product-info">
+                                    <h3>Gourmet Coffee</h3>
+                                    <p>$24.99</p>
+                                    <button class="btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <div class="product-card">
+                                <img src="https://via.placeholder.com/300x200?text=Luxury+Bedding+Set" alt="Luxury Bedding Set" width="300" height="200">
+                                <div class="product-info">
+                                    <h3>Luxury Bedding Set</h3>
+                                    <p>$149.99</p>
+                                    <button class="btn">Add to Cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-button carousel-button-prev">&lt;</button>
+                    <button class="carousel-button carousel-button-next">&gt;</button>
+                </div>
+            </section>
+
+            <section class="popular-categories container">
+                <h2>Popular Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/200x150?text=Baking+Supplies" alt="Baking Supplies" width="200" height="150">
+                        <h3>Baking Supplies</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/200x150?text=Groceries" alt="Groceries" width="200" height="150">
+                        <h3>Groceries</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/200x150?text=Home+Decor" alt="Home Decor" width="200" height="150">
+                        <h3>Home Decor</h3>
+                    </div>
+                    <div class="category-card">
+                        <img src="https://via.placeholder.com/200x150?text=Kitchen+Essentials" alt="Kitchen Essentials" width="200" height="150">
+                        <h3>Kitchen Essentials</h3>
+                    </div>
+                </div>
+            </section>
+
+            <section class="seasonal-promotions">
+                <div class="container">
+                    <h2>Seasonal Promotions</h2>
+                    <div class="promotion-card">
+                        <img src="https://via.placeholder.com/400x200?text=Summer+Sale" alt="Summer Sale" width="400" height="200">
+                        <div class="promotion-info">
+                            <h3>Summer Sale</h3>
+                            <p>Enjoy up to 50% off on selected summer items!</p>
+                            <a href="#" class="btn">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="new-arrivals container">
+                <h2>New Arrivals</h2>
+                <div class="arrivals-grid">
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=New+Product+1" alt="New Product 1" width="250" height="200">
+                        <div class="product-info">
+                            <h3>New Product 1</h3>
+                            <p>$39.99</p>
+                            <button class="btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=New+Product+2" alt="New Product 2" width="250" height="200">
+                        <div class="product-info">
+                            <h3>New Product 2</h3>
+                            <p>$49.99</p>
+                            <button class="btn">Add to Cart</button>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <img src="https://via.placeholder.com/250x200?text=New+Product+3" alt="New Product 3" width="250" height="200">
+                        <div class="product-info">
+                            <h3>New Product 3</h3>
+                            <p>$29.99</p>
+                            <button class="btn">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="customer-reviews container">
+                <h2>Customer Reviews</h2>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"Absolutely love the quality of products from Saen Crystal. Will definitely shop here again!"</p>
+                    <p class="reviewer">- Sarah M.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★☆</div>
+                    <p>"Great selection of kitchenware. Shipping was fast and everything arrived in perfect condition."</p>
+                    <p class="reviewer">- John D.</p>
+                </div>
+            </section>
+
+            <section class="newsletter-signup">
+                <div class="container">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for the latest deals and products</p>
+                    <form id="newsletter-form" class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">Shipping Information</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+                        <a href="#" target="_blank" rel="noopener noreferrer">Pinterest</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Saen Crystal Specialty Stores. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('toggle');
+        });
+
+        // Carousel functionality
+        const carousel = document.querySelector('.carousel-container');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.querySelector('.carousel-button-prev');
+        const nextBtn = document.querySelector('.carousel-button-next');
+
+        let currentIndex = 0;
+
+        function showSlide(index) {
+            carousel.style.transform = `translateX(-${index * 100}%)`;
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            showSlide(currentIndex);
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        // Auto-rotate carousel
+        setInterval(nextSlide, 5000);
+
+        // Newsletter form submission
+        const newsletterForm = document.getElementById('newsletter-form');
+
+        newsletterForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input[type="email"]').value;
+            alert(`Thank you for subscribing with email: ${email}`);
+            newsletterForm.reset();
+        });
+
+        // Animate on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.product-card, .category-card, .promotion-card, .review-card');
+            
+            elements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const elementBottom = element.getBoundingClientRect().bottom;
+
+                if (elementTop < window.innerHeight && elementBottom > 0) {
+                    element.classList.add('animate');
+                } else {
+                    element.classList.remove('animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+
+        // Sticky header
+        const header = document.querySelector('header');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Add to cart functionality
+        const addToCartButtons = document.querySelectorAll('.product-card .btn');
+
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const productName = button.parentElement.querySelector('h3').textContent;
+                alert(`Added ${productName} to cart!`);
+                // Here you would typically update the cart state and UI
+            });
+        });
+    </script>
+</body>
+</html>

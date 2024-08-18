@@ -1,0 +1,103 @@
+<html><head><base href="../html-files/shop-saencrystal specialty store.html">
+
+<html><head><base href="../html-files/index.html">
+
+    <html><head><base href="../html-files/product-detail saencrystal specialty store.html">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>   
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shopping Cart - Saencrystal Specialty Stores</title>
+
+<link rel="stylesheet" href="../css-files/client-styles.css">
+
+<link rel="stylesheet" href="../css-files/shopping-cart.css">
+
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo">
+                <img src="../assets-files/client/only-logo.png" alt=""><p>saencrystal <highlight-text>specialty</highlight-text> Stores</p> 
+            </div>
+
+            <div class="mobile-nav">
+                
+                <div id="menu-toggle" class="menu-toggle">☰</div>
+                <div id="menu-cancel" class="menu-cancel">✕</div>
+
+
+            <div class="navbar">
+                 <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="../html-files/shop-saencrystal specialty store.html" class="active">Shop</a></li>
+                    <li><a href="../html-files/about us saencrystal specialty store.html">About</a></li>
+                    <li><a href="../html-files/contact us saencrystal specialty store.html">Contact</a></li>
+                    <li><a href="../html-files/blog-seancrystal specialty store.html">Blog</a></li>
+                </ul>
+                <div class="user-actions">
+                    <a href="../html-files/shoping-cart saencrystal specialty store.html" class="cart-icon" >Cart</a>
+                    <div class="login"><a href="../html-files/login&signup saencrystal specialty store.html">Login</a></div>
+                    
+                </div>
+                
+            </div>
+
+               
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Your Shopping Cart</h1>
+        <div class="cart-container">
+            <div class="cart-header">
+                <span>Product</span>
+                <span>Price</span>
+                <span>Quantity</span>
+                <span>Total</span>
+                <span></span>
+            </div>
+            <div class="cart-item">
+                <div class="item-details">
+                    <img src="https://via.placeholder.com/80x80?text=Crystal+Vase" alt="Crystal Vase" width="80" height="80">
+                    <span class="item-name">Crystal Vase</span>
+                </div>
+                <span>$59.99</span>
+                <div class="item-quantity">
+                    <button class="quantity-btn decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                    <button class="quantity-btn increase">+</button>
+                </div>
+                <span class="item-total">$59.99</span>
+                <button class="remove-item">×</button>
+            </div>
+            <div class="cart-item">
+                <div class="item-details">
+                    <img src="https://via.placeholder.com/80x80?text=Crystal+Decanter" alt="Crystal Decanter" width="80" height="80">
+                    <span class="item-name">Crystal Decanter</span>
+                </div>
+                <span>$79.99</span>
+                <div class="item-quantity">
+                    <button class="quantity-btn decrease">-</button>
+                    <input type="number" class="quantity-input" value="1" min="1" max="10">
+                    <button class="quantity-btn increase">+</button>
+                </div>
+                <span class="item-total">$79.99</span>
+                <button class="remove-item">×</button>
+            </div>
+            <div class="cart-summary">
+                <span class="total-price">Total: $139.98</span>
+                <button id="checkout-btn" class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="../js-files/client.js"></script>
+    <script src="../js-files/shoppin-cart.js"></script>
+    <script src="../js-files/cart-manager.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<html><head><base href="../html-files/Checkout.html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Order Confirmation - Saencrystal Specialty Stores</title>
+
+<link rel="stylesheet" href="../css-files/client-styles.css">
+
+<link rel="stylesheet" href="../css-files/order-confirmation.css">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo">
+                <img src="../assets-files/client/only-logo.png" alt=""><p>saencrystal <highlight-text>specialty</highlight-text> Stores</p> 
+            </div>
+
+            <div class="mobile-nav">
+                
+                <div id="menu-toggle" class="menu-toggle">☰</div>
+                <div id="menu-cancel" class="menu-cancel">✕</div>
+
+
+            <div class="navbar">
+                 <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="../html-files/shop-saencrystal specialty store.html" class="active">Shop</a></li>
+                    <li><a href="../html-files/about us saencrystal specialty store.html">About</a></li>
+                    <li><a href="../html-files/contact us saencrystal specialty store.html">Contact</a></li>
+                    <li><a href="../html-files/blog-seancrystal specialty store.html">Blog</a></li>
+                </ul>
+                <!-- <div class="user-actions">
+                    <a href="../html-files/shoping-cart saencrystal specialty store.html" class="cart-icon">Cart</a>
+                    <div class="login"><a href="../html-files/login&signup saencrystal specialty store.html">Login</a></div>
+                    
+                </div> -->
+                
+            </div>
+
+               
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Order Confirmation</h1>
+        <div class="confirmation-container">
+            <div class="confirmation-header">
+                <h2>Thank you for your order, <span id="customer-name"></span>!</h2>
+                <p>Your order has been successfully placed and is being processed.</p>
+            </div>
+
+            <div class="confirmation-details">
+                <h3>Order Details</h3>
+                <div class="detail-group">
+                    <strong>Order Number:</strong> <span id="order-number"></span>
+                </div>
+                <div class="detail-group">
+                    <strong>Email:</strong> <span id="customer-email"></span>
+                </div>
+                <div class="detail-group">
+                    <strong>Phone:</strong> <span id="customer-phone"></span>
+                </div>
+                <div class="detail-group">
+                    <strong>Shipping Address:</strong> <span id="shipping-address"></span>
+                </div>
+            </div>
+
+            <div class="order-summary">
+                <h3>Order Summary</h3>
+                <div id="order-items"></div>
+                <div class="order-total">
+                    <strong>Total:</strong> <span id="order-total"></span>
+                </div>
+            </div>
+
+            <div class="thank-you">
+                <p>Thank you for shopping with Saencrystal Specialty Stores!</p>
+            </div>
+
+            <div class="navigation-options">
+                <a href="../html-files/shop-saencrystal specialty store.html" class="btn">Continue Shopping</a>
+                <a href="index.html" class="btn">Return to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js-files/client.js"></script>
+    <script src="../js-files/order-confirmation.js"></script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<html><head><base href="https://www.saencrystal-specialty-stores.com/now%20write%20the%20page%20together%20so%20that%20i%20can%20see%20it%20functioning/the%20navbar%20should%20contain%20the%20other%20pages%20to%20be%20created%20and%20not%20the%20product%20categories,%20make%20the%20page%20more%20interactive%20and%20add%20serious%20animations%20and%20responsiveness,%20also%20media%20queries%20for%20all%20screen%20sizes/%20follow%20the%20folder%20structure%20and%20add%20the%20categories%20as%20aside,%20do%20not%20miss%20out%20on%20anything%20that%20is%20included%20in%20the%20folder%20structure,%20make%20the%20page%20attractive%20and%20colorful%20./next%20page/write%20the%20next%20page/write%20the%20next%20page/write%20the%20next%20page/write%20the%20next%20page/write%20the%20next%20page">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog - Saen Crystal Specialty Stores</title>
+<style>
+:root {
+    --primary-color: #6a4c93;
+    --secondary-color: #1982c4;
+    --accent-color: #f9844a;
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+.user-actions a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--white);
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Main Content */
+main {
+    margin-top: 90px;
+    padding: 40px 0;
+    display: flex;
+}
+
+.blog-content {
+    flex: 3;
+    padding-right: 40px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--primary-color);
+    margin-bottom: 30px;
+}
+
+.blog-post {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.blog-post:hover {
+    transform: translateY(-5px);
+}
+
+.blog-post img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.blog-post-content {
+    padding: 20px;
+}
+
+.blog-post h2 {
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+
+.blog-post p {
+    margin-bottom: 15px;
+}
+
+.read-more {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--white);
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #e76f51;
+}
+
+/* Sidebar */
+aside {
+    flex: 1;
+}
+
+.sidebar-section {
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.sidebar-section h3 {
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+}
+
+.categories-list, .recent-posts-list {
+    list-style: none;
+}
+
+.categories-list li, .recent-posts-list li {
+    margin-bottom: 10px;
+}
+
+.categories-list a, .recent-posts-list a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.categories-list a:hover, .recent-posts-list a:hover {
+    color: var(--accent-color);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.blog-post {
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.sidebar-section {
+    animation: slideIn 0.5s ease-in-out;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .blog-content {
+        padding-right: 0;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        background-color: var(--primary-color);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding-top: 60px;
+    }
+
+    .nav-links li {
+        opacity: 0;
+        margin-bottom: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 2;
+    }
+
+    .nav-active {
+        transform: translateX(0%);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .toggle .line2 {
+        opacity: 0;
+    }
+
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .blog-post img {
+        height: 150px;
+    }
+}
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="/"><img src="https://via.placeholder.com/150x50?text=Saen+Crystal+Logo" alt="Saen Crystal Specialty Stores Logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Blog</a></li>
+            </ul>
+            <div class="user-actions">
+                <a href="#">Login</a>
+                <a href="#" class="cart-icon"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="blog-content">
+            <h1>Our Blog</h1>
+            
+            <article class="blog-post">
+                <img src="https://via.placeholder.com/800x400?text=Crystal+Care+Tips" alt="Crystal Care Tips">
+                <div class="blog-post-content">
+                    <h2>Essential Crystal Care Tips</h2>
+                    <p>Discover the best practices for maintaining your crystal collection. From cleaning techniques to proper storage, we've got you covered.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="https://via.placeholder.com/800x400?text=Baking+Innovations" alt="Baking Innovations">
+                <div class="blog-post-content">
+                    <h2>Latest Baking Innovations</h2>
+                    <p>Explore cutting-edge tools and techniques that are revolutionizing the baking world. Stay ahead of the curve with our insider insights.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+
+            <article class="blog-post">
+                <img src="https://via.placeholder.com/800x400?text=Specialty+Ingredients" alt="Specialty Ingredients">
+                <div class="blog-post-content">
+                    <h2>Spotlight on Specialty Ingredients</h2>
+                    <p>Dive into the world of unique and hard-to-find ingredients. Learn how these culinary treasures can elevate your cooking and baking.</p>
+                    <a href="#" class="read-more">Read More</a>
+                </div>
+            </article>
+        </section>
+
+        <aside>
+            <div class="sidebar-section">
+                <h3>Categories</h3>
+                <ul class="categories-list">
+                    <li><a href="#">Crystal Care</a></li>
+                    <li><a href="#">Baking Tips</a></li>
+                    <li><a href="#">Product Spotlights</a></li>
+                    <li><a href="#">DIY Projects</a></li>
+                    <li><a href="#">Industry News</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3>Recent Posts</h3>
+                <ul class="recent-posts-list">
+                    <li><a href="#">The Art of Crystal Display</a></li>
+                    <li><a href="#">5 Must-Have Baking Tools</a></li>
+                    <li><a href="#">Sustainable Packaging in Retail</a></li>
+                    <li><a href="#">Seasonal Crystal Selection Guide</a></li>
+                </ul>
+            </div>
+        </aside>
+    </main>
+
+    <script>
+        // Navigation menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            hamburger.classList.toggle('toggle');
+        });
+
+        // Sticky header
+        const header = document.querySelector('header');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', () => {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (scrollTop > lastScrollTop) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            lastScrollTop = scrollTop;
+        });
+
+        // Animate blog posts on scroll
+        const animateOnScroll = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(animateOnScroll, {
+            root: null,
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.blog-post').forEach(post => {
+            post.style.opacity = 0;
+            post.style.transform = 'translateY(20px)';
+            observer.observe(post);
+        });
+
+        // Add hover effect to blog posts
+        const blogPosts = document.querySelectorAll('.blog-post');
+        blogPosts.forEach(post => {
+            post.addEventListener('mouseover', () => {
+                post.style.transform = 'scale(1.03)';
+                post.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.2)';
+            });
+            post.addEventListener('mouseout', () => {
+                post.style.transform = 'scale(1)';
+                post.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            });
+        });
+
+        // Animate sidebar sections
+        const sidebarSections = document.querySelectorAll('.sidebar-section');
+        sidebarSections.forEach((section, index) => {
+            section.style.opacity = 0;
+            section.style.transform = 'translateX(20px)';
+            setTimeout(() => {
+                section.style.opacity = 1;
+                section.style.transform = 'translateX(0)';
+            }, 300 * (index + 1));
+        });
+    </script>
+</body>
+</html>

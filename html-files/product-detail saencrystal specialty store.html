@@ -1,0 +1,155 @@
+<!-- <html><head><base href="https://www.saencrystal-specialty-stores.com/now%20write%20the%20page%20together%20so%20that%20i%20can%20see%20it%20functioning/the%20navbar%20should%20contain%20the%20other%20pages%20to%20be%20created%20and%20not%20the%20product%20categories,%20make%20the%20page%20more%20interactive%20and%20add%20serious%20animations%20and%20responsiveness,%20also%20media%20queries%20for%20all%20screen%20sizes/%20follow%20the%20folder%20structure%20and%20add%20the%20categories%20as%20aside,%20do%20not%20miss%20out%20on%20anything%20that%20is%20included%20in%20the%20folder%20structure,%20make%20the%20page%20attractive%20and%20colorful%20./next%20page/write%20the%20next%20page"> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Details - Saencrystal Specialty Stores</title>
+
+<link rel="stylesheet" href="../css-files/client-styles.css">
+
+<link rel="stylesheet" href="../css-files/product-detail.css">
+</head>
+<body>
+    <header>
+        <nav>
+            
+            <div class="logo">
+                <img src="../assets-files/client/only-logo.png" alt=""><p>saencrystal <highlight-text>specialty</highlight-text> Stores</p> 
+            </div>
+
+            <div class="mobile-nav">
+                
+                <div id="menu-toggle" class="menu-toggle">☰</div>
+                <div id="menu-cancel" class="menu-cancel">✕</div>
+
+
+            <div class="navbar">
+                 <ul class="nav-links" id="nav-links">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="../html-files/shop-saencrystal specialty store.html" class="active">Shop</a></li>
+                    <li><a href="../html-files/about us saencrystal specialty store.html">About</a></li>
+                    <li><a href="../html-files/contact us saencrystal specialty store.html">Contact</a></li>
+                    <li><a href="../html-files/blog-seancrystal specialty store.html">Blog</a></li>
+                </ul>
+                <div class="user-actions">
+                    <a href="../html-files/shoping-cart saencrystal specialty store.html" class="cart-icon">Cart</a>
+                    <div class="login"><a href="../html-files/login&signup saencrystal specialty store.html">Login</a></div>
+                    
+                </div>
+                
+            </div>
+
+               
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="product-details">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/600x600?text=Crystal+Vase" alt="Crystal Vase" width="600" height="600">
+            </div>
+            <div class="product-info">
+                <h1 class="product-title">Crystal Vase</h1>
+                <p class="product-price">$59.99</p>
+                <div class="product-description">
+                    <p>Elevate your home decor with this exquisite crystal vase. Crafted with precision and care, this vase is perfect for displaying your favorite flowers or as a standalone piece of art. Its brilliant clarity and elegant design make it a stunning addition to any room.</p>
+                </div>
+                <div class="product-meta">
+                    <p><strong>SKU:</strong> CV-001</p>
+                    <p><strong>Category:</strong> Kitchenware</p>
+                    <p><strong>Tags:</strong> Crystal, Vase, Home Decor</p>
+                </div>
+                <div class="add-to-cart">
+                    <div class="quantity">
+                        <button class="decrease">-</button>
+                        <input type="number" value="1" min="1" max="10">
+                        <button class="increase">+</button>
+                    </div>
+                    <button class="btn-add-to-cart">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="product-tabs">
+            <div class="tab-buttons">
+                <button class="tab-button active" data-tab="description">Description</button>
+                <button class="tab-button" data-tab="specifications">Specifications</button>
+                <button class="tab-button" data-tab="reviews">Reviews</button>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane active" id="description">
+                    <p>This crystal vase is a testament to fine craftsmanship and elegant design. Made from high-quality crystal, it catches and reflects light beautifully, creating a dazzling display in any setting. The vase features a classic shape with modern touches, making it versatile enough to complement various decor styles.</p>
+                    <p>Whether you're arranging a bouquet of fresh flowers or using it as a decorative piece on its own, this vase is sure to draw admiration. Its generous size accommodates large arrangements, while its sturdy base ensures stability.</p>
+                </div>
+                <div class="tab-pane" id="specifications">
+                    <ul>
+                        <li><strong>Material:</strong> Lead-free Crystal</li>
+                        <li><strong>Height:</strong> 12 inches (30.5 cm)</li>
+                        <li><strong>Diameter:</strong> 6 inches (15.2 cm)</li>
+                        <li><strong>Weight:</strong> 3.5 lbs (1.6 kg)</li>
+                        <li><strong>Care Instructions:</strong> Hand wash with mild soap and warm water. Dry with a soft, lint-free cloth.</li>
+                    </ul>
+                </div>
+                <div class="tab-pane" id="reviews">
+                    <div class="review">
+                        <h3>Beautiful Addition to My Home</h3>
+                        <p>⭐⭐⭐⭐⭐</p>
+                        <p>This crystal vase is absolutely stunning! It arrived well-packaged and in perfect condition. The clarity of the crystal is impressive, and it really catches the light beautifully. I've received numerous compliments on it already.</p>
+                        <p><em>- Sarah M., Verified Buyer</em></p>
+                    </div>
+                    <div class="review">
+                        <h3>Elegant and Well-Made</h3>
+                        <p>⭐⭐⭐⭐</p>
+                        <p>I'm very pleased with this purchase. The vase is heavier than I expected, which speaks to its quality. It's perfect for my dining room centerpiece. The only reason I'm not giving it 5 stars is that I wish it came in more size options.</p>
+                        <p><em>- Michael R., Verified Buyer</em></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="related-products">
+            <h2>You May Also Like</h2>
+            <div class="product-slider">
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200?text=Crystal+Decanter" alt="Crystal Decanter" width="250" height="200">
+                    <div class="product-card-info">
+                        <h3>Crystal Decanter</h3>
+                        <p>$79.99</p>
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200?text=Crystal+Champagne+Flutes" alt="Crystal Champagne Flutes" width="250" height="200">
+                    <div class="product-card-info">
+                        <h3>Crystal Champagne Flutes (Set of 2)</h3>
+                        <p>$49.99</p>
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200?text=Crystal+Bowl" alt="Crystal Bowl" width="250" height="200">
+                    <div class="product-card-info">
+                        <h3>Crystal Serving Bowl</h3>
+                        <p>$69.99</p>
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/250x200?text=Crystal+Candleholders" alt="Crystal Candleholders" width="250" height="200">
+                    <div class="product-card-info">
+                        <h3>Crystal Candleholders (Pair)</h3>
+                        <p>$54.99</p>
+                        <button class="btn-add-to-cart">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="../js-files/client.js"></script>
+
+    <script src="../js-files/product-detail.js"></script>
+</body>
+</html>

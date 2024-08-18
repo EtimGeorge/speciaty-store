@@ -1,0 +1,258 @@
+:root {
+  --primary2-color: #6a4c93;
+  --secondary-color: #1982c4;
+  --accent-color: #f9844a;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --white: #fff;
+  --lemon-color:#d9e721f1;
+  --dack-orange-color:#ff5722;
+  --light-color:#f4f4f4;
+  --black:#030303;
+  --second-background-color:#333;
+  --danger-color:#fc0505;
+  --active-color:#03d703;
+  --view-color:#17a2b8;
+  --shadow-color:#fefefe77;
+  --shadow-color-2:#d6cdcd53;
+  --toggle-font-size:24px;
+  --acent2-color:#e91e63;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+} */
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* header {
+  background-color: var(--primary-color);
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.1);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--accent-color);
+} */
+
+main {
+  margin-top: 90px;
+  padding: 40px 0;
+}
+
+h1 {
+  font-size: 2.5em;
+  color: var(--primary-color);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.confirmation-container {
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.confirmation-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.confirmation-header h2 {
+  color: var(--secondary-color);
+  font-size: 1.8em;
+  margin-bottom: 10px;
+}
+
+.confirmation-details {
+  margin-bottom: 30px;
+}
+
+.confirmation-details h3 {
+  color: var(--primary-color);
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.detail-group {
+  margin-bottom: 20px;
+}
+
+.detail-group strong {
+  display: inline-block;
+  width: 150px;
+  color: var(--secondary-color);
+}
+
+.order-summary {
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.order-summary h3 {
+  color: var(--primary-color);
+  font-size: 1.4em;
+  margin-bottom: 15px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.order-total {
+  font-weight: bold;
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.thank-you {
+  text-align: center;
+  font-size: 1.2em;
+  color: var(--accent-color);
+  margin-top: 30px;
+}
+
+/* Navigation options styles */
+.navigation-options {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+.confirmation-container {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.confirmation-header,
+.confirmation-details,
+.order-summary,
+.thank-you {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+  .confirmation-container {
+      padding: 20px;
+  }
+
+  .detail-group strong {
+      width: 120px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  h1 {
+      font-size: 2em;
+  }
+
+  .confirmation-header h2 {
+      font-size: 1.5em;
+  }
+
+  .confirmation-details h3,
+  .order-summary h3 {
+      font-size: 1.2em;
+  }
+
+  .detail-group {
+      display: flex;
+      flex-direction: column;
+  }
+
+  .detail-group strong {
+      width: 100%;
+      margin-bottom: 5px;
+  }
+}
